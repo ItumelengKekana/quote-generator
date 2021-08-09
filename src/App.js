@@ -41,7 +41,7 @@ function App() {
 	<div className="App">
 	  <div className="container" id="quote-box">
 		<div className="quote-text">
-			<p id="text">{quote}</p>
+			<p id="text"><span>"</span>{quote}<span>"</span></p>
 		</div>
 		<h3 id="author">-{author}</h3>
 		<a href={url} id="tweet-quote" className="button" target="_blank">Tweet</a>
