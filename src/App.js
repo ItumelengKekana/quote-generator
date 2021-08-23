@@ -6,7 +6,7 @@ function App() {
 	const [author, setAuthor] = useState("");
 	const [results, setResults] = useState([]);
 
-	//set background colour to the elements
+	//set background colour of the elements
 	const setBg = () => {
 		//generate a random colour and assign it to the body element code from (https://css-tricks.com/snippets/javascript/random-hex-color/)
 
