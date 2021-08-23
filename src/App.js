@@ -1,10 +1,10 @@
 import './App.css';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 function App() {
 	const [quote, setQuote] = useState("");
 	const [author, setAuthor] = useState("");
-	const [results, setresults] = useState([]);
+	const [results, setResults] = useState([]);
 
 	const setBg = () => {
 		const randomColor = Math.floor(Math.random()*16777215).toString(16);
@@ -28,9 +28,9 @@ function App() {
 		const json = await response.json();
 		console.log(json);
 
-		setresults(json.quotes);
-		setQuote(json.quotes[0].text);
-		setAuthor(json.quotes[0].author);
+		setResults(json.quotes[0]);
+		setQuote(results.text);
+		setAuthor(results.author);
 
 		setBg();
 	}
