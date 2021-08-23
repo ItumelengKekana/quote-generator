@@ -4,11 +4,12 @@ import {useState} from 'react';
 function App() {
 	const [quote, setQuote] = useState("");
 	const [author, setAuthor] = useState("");
-	const [results, setresults] = useState([]);
+	const [results, setResults] = useState([]);
 
 	//set background colour to the elements
 	const setBg = () => {
 		//generate a random colour and assign it to the body element code from (https://css-tricks.com/snippets/javascript/random-hex-color/)
+
 		const randomColor = Math.floor(Math.random()*16777215).toString(16);
 		document.body.style.backgroundColor = "#" + randomColor;
 
@@ -36,7 +37,7 @@ function App() {
 		const json = await response.json();
 		console.log(json);
 
-		setresults(json.quotes[0]);
+		setResults(json.quotes[0]);
 		setQuote(results.text);
 		setAuthor(results.author);
 
