@@ -44,8 +44,13 @@ function App() {
 		setBg();
 	}
 
+	//lifecycle
+	useEffect(() =>{
+		getQuote();
+	}, [])
+
 	//declare url for the tweet
-	const url = `twitter.com/intent/tweet?hashtags=quotes&text=${quote}-${author}`;
+	const url = `https://twitter.com/intent/tweet?hashtags=quotes&text=${quote}-${author}`;
 
 
   return (
