@@ -11,6 +11,7 @@ function App() {
 		//generate a random colour and assign it to the body element code from (https://css-tricks.com/snippets/javascript/random-hex-color/)
 
 		const randomColor = Math.floor(Math.random()*16777215).toString(16);
+
 		document.body.style.backgroundColor = "#" + randomColor;
 
 		const text = document.querySelector('#text');
