@@ -48,6 +48,7 @@ function App() {
 	//lifecycle
 	useEffect(() => {
 		getQuote();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	//declare url for the tweet
